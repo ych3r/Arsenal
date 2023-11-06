@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import subprocess
 import sys
 
 interface = sys.argv[1]
 mac_address = sys.argv[2]
 
-subprocess.call(f"ifconfig {interface} down", shell=True)
-subprocess.call(f"ifconfig {interface} hw ether {mac_address}", shell=True)
-subprocess.call(f"ifconfig {interface} up", shell=True)
-subprocess.call(f"ifconfig {interface}", shell=True)
+print(f"[+] Changing MAC address for {interface} to {mac_address}")
+subprocess.call(["ifconfig", interface, "down"])
+subprocess.call(["ifconfig", interface, "hw", "ether", mac_address])
+subprocess.call(["ifconfig", interface, "up"])

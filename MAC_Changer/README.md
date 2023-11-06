@@ -1,5 +1,11 @@
 # MAC address changer
 
+Why would you want to change the MAC address?
+
+- MAC Spoofing
+
+---
+
 Check network info: `ifconfig`
 
 Disable eth0: `ifconfig eth0 down`
