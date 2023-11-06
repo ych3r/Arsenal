@@ -1,9 +1,11 @@
 # MAC address changer
 
-`ifconfig`
+Check network info: `ifconfig`
 
-`ifconfig eth0 down`
+Disable eth0: `ifconfig eth0 down`
 
-`ifconfig eth0 hw ether 00:11:22:33:44:55`
+Change MAC address: `ifconfig eth0 hw ether 00:11:22:33:44:55`
 
-`ifconfig eth0 up`
+Enable eth0: `ifconfig eth0 up`
+
+Original MAC address: `ethtool -P eth0`
