@@ -18,6 +18,8 @@ Meantime at the victime machine, type `arp -a` the router's MAC address will bec
 
 Set ip forwarding so victim machine can access the internet: `sudo bash -c 'echo 1 > /proc/sys/net/ipv4/ip_forward'`
 
+(in my case) Set firewall rule: `sudo iptables -A FORWARD -i eth0 -j ACCEPT`
+
 ---
 
 ```sh
